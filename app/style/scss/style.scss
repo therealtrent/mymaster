@@ -1,0 +1,179 @@
+@import "variables/variables";
+@import "base/normalize";
+@import "base/grid-system";
+@import "base/web-font";
+@import "plugins/plugins";
+@import "mixin/mixin";
+@import "components/components";
+@import 'form/form';
+@import "layouts/layouts";
+@import "helpers/helpers";
+
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,159,125,1) 0%,rgba(172,84,192,1) 100%);
+}
+.inner{
+    padding: 20px;
+}
+
+.container{
+    margin-top: 50px;
+    background-color: $back-bluegray;
+    padding: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+
+    .topbar{
+        background-color: $my-purple;
+        color: $my-white;
+        height: 80px;
+        border-top: 1px solid $bar-highlight;
+
+        .inrow{
+            width: 100%;
+            padding: 30px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            i{
+                font-size: 23px;
+            }
+            span{
+                padding-left: 15px;
+            }
+            .logotext{
+                font-family: 'Montserrat', sans-serif; 
+                font-size: 14px;
+            }
+            .righthead{
+                
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                a{
+                    padding-right: 25px; 
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    .main{
+        display:flex;
+
+        .left{
+            width: 300px;
+            background-color: $deep-blue;
+
+            .titlebox{
+                color: $my-white;
+                padding: 30px;
+                border-bottom: 1px solid $deep-blueshade;
+
+                span{
+                    display: block;
+                }
+                
+                .topline{
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+                .botline{
+                    font-size: 12px;
+                }
+            }
+            .tutcont{
+                border-top: 1px solid $deep-bluehighlight;
+                padding: 20px 0px;
+
+                .tutrow{
+                    display: flex;
+                    padding: 20px 30px;
+    
+                    .iconcirc{
+                        
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        color: $my-white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .red{
+                        background-color: $my-red;
+                    }
+                    .yellow{
+                        background-color: $my-yellow;
+                    }
+                    .green{
+                        background-color: $my-green;
+                    }
+                    .purple{
+                        background-color: $icon-purple;
+                    }
+                    .title{
+                        width: calc(95% - 35px);
+                        color: $my-white;
+                        margin-left: 15px;
+                    }
+                }
+            }
+            
+        }
+        .right{
+            width: calc(100% - 300px);
+
+            .inner{
+                padding: 30px;
+
+                .box{
+                    background-color: $my-white;
+                    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+                    height: 250px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .leftbox{
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding-left: 50px;
+
+                        span{
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 22px;
+                            line-height: 30px;
+                        }
+                        .mylink{
+                            border: 1px solid $my-purple;
+                            padding: 12px 18px;
+                            color: $my-purple;
+                            border-radius: 3px;
+                            text-align: center;
+                            width: 150px;
+                            margin-top: 20px;
+                        }
+                    }
+                    .rightbox{
+                        height: 100%;
+
+                        img{
+                            height: 250px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
